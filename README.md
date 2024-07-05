@@ -57,7 +57,7 @@ During setup, provide the following inputs:
 
 Generate a new module under src folder 
 
-- ng g m angular-material
+- Open Terminal and generate module by using command `ng g m angular-material`
 
  [Angular Material File](src/app/angular-material/angular-material.module.ts)
 
@@ -75,17 +75,66 @@ Run the following command to add Angular Material
 
 **Import Angular Material Modules**
 
-- Import the Angular Material modules in app.module.ts.
-
- [App Module.ts](src/app/app.module.ts)
+- Import the Angular Material modules in app.module.ts.  [App Module.ts](src/app/app.module.ts)
 
 **Install Angular Flex Layout**
 
 - Install Angular Flex Layout using command `npm i @angular/flex-layout`
 
-- Import the Flex Layout module in app.module.ts.
+- Import the Flex Layout module in app.module.ts. [App Module.ts](src/app/app.module.ts)
 
-[App Module.ts](src/app/app.module.ts)
+
+## Angular CLI Commands
+
+**Generate a New Component**
+
+- To generate a new component in Angular, use the following command `ng g c component-name`
+
+**Generate a New Service**
+
+- To generate a new service in Angular, use the following command `ng g s service-name`
+
+**Generate a New Pipe**
+
+- To generate a new pipe in Angular, use the following command  `ng g p pipe-name`
+
+**Generate a New Directive**
+
+- To generate a new directive in Angular, use the following command `ng g d directive-name`
+
+**Generate a New Module**
+
+- To generate a new module in Angular, use the following command  `ng g m module-name`
+
+**Generate a New Class**
+
+- To generate a new class in Angular, use the following command `ng g cl class-name`
+
+**Generate a New Module with Routing**
+
+- To generate a new module with routing in Angular, use the following command `ng g m module-name --routing`
+**Generate a New Interface**
+
+- To generate a new interface in Angular, use the following command `ng g i interface-name` 
+
+
+**Generate a New Guard**
+
+- To generate a new guard in Angular, use the following command  `ng g g guard-name`
+
+**Run Unit Tests**
+
+- To run unit tests, use the following command  `ng test`
+
+**Run End-to-End Tests**
+
+- To run end-to-end tests, use the following command `ng e2e`
+
+**Additional Resources**
+
+- For a complete list of Angular CLI commands and their options, refer to the Angular CLI documentation. 
+
+[ Angular CLI documentation](https://v17.angular.io/cli?c=bolhadev?c=bolhadev)
 
 
 ## Firebase Configuration
@@ -94,7 +143,7 @@ Run the following command to add Angular Material
 
 - Install Firebase and AngularFire using command npm install firebase @angular/fire --legacy-peer-deps
 
-- Verify the installation in package.json.
+- Verify the installation in package.json. [package.json File](package.json)
 
 **Set Up Firebase Project**
 
@@ -111,15 +160,15 @@ Run the following command to add Angular Material
 
 **Initialize Firebase in app.module.ts**
 
-- Import the Firebase and AngularFire modules in app.module.ts:
+- Import the Firebase and AngularFire modules in app.module.ts  [App Module.ts](src/app/app.module.ts)
 
 **Deploy to Firebase**
 
-- Build the application using cmd ng build
+- Build the application using command `ng build`
 
 **Deploy to Firebase:**
 
-- Deploy to Firebase using cmd firebase deploy
+- Deploy to Firebase using command `firebase deploy`
 
 ## Contact Information:
 For any questions or further information, feel free to contact:
