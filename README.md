@@ -2,8 +2,21 @@
 
 **Prerequisites**:
 Ensure you have Node.js and npm installed using below command:
-- node -v
-- npm -v
+- `node -v`
+- `npm -v`
+
+## Installation Guide for Node.js (if not installed):
+
+If Node.js is not installed on your machine, follow these steps to install it:
+
+**Download Node.js**:
+
+  - 1.Visit [nodejs.org.](https://nodejs.org/en/about/previous-releases)
+  - 2.Download the LTS (Long Term Support) version for your operating system.
+  - 3.Verify the installation by opening a terminal or command prompt by using command `node -v` and `npm -v`
+
+
+## Angular 16 Setup
 
 **Install Angular CLI**:
 Install Angular 16 globally using the command
@@ -46,7 +59,7 @@ Generate a new module under src folder
 
 - ng g m angular-material
 
- ![Angular Material File](src/app/angular-material/angular-material.module.ts)
+ [Angular Material File](src/app/angular-material/angular-material.module.ts)
 
  **Install Angular Material**
 
@@ -64,7 +77,7 @@ Run the following command to add Angular Material
 
 - Import the Angular Material modules in app.module.ts.
 
- ![App Module.ts](src/app/app.module.ts)
+ [App Module.ts](src/app/app.module.ts)
 
 **Install Angular Flex Layout**
 
@@ -72,7 +85,7 @@ Run the following command to add Angular Material
 
 - Import the Flex Layout module in app.module.ts.
 
-![App Module.ts](src/app/app.module.ts)
+[App Module.ts](src/app/app.module.ts)
 
 
 ## Firebase Configuration
