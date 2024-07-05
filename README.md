@@ -1,27 +1,109 @@
-# TestApplication
+## Angular Application Setup with Firebase and Configuration Guide
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+**Prerequisites**:
+Ensure you have Node.js and npm installed using below command:
+- node -v
+- npm -v
 
-## Development server
+**Install Angular CLI**:
+Install Angular 16 globally using the command
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Command: npm install -g @angular/cli@16.0.1
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Verify Angular CLI Installation**
+Check the installed version of Angular CLI using cmd-  ng v
 
-## Build
+ **Create a New Angular Application**
+Create a new Angular application named test-application:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Command: ng new your_application_name
 
-## Running unit tests
+During setup, provide the following inputs:
+   
+   - Would you like to add Angular routing? (y/N): y
+   - Which stylesheet format would you like to use? I recommended you to Choose scss
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ **Navigate to Application Directory**
 
-## Running end-to-end tests
+ navigate to project dir using cmd - cd test-application
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+**Navigate to Application Directory**
 
-## Further help
+- Start the development server using command - ng s
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- You will be prompted to share pseudonymous usage data. Choose y.
+
+- The application will be running on http://localhost:4200/.
+  
+
+## Additional Steps
+
+**Create a Module for Angular Material**
+
+Generate a new module under src folder 
+
+- ng g m angular-material
+
+ **Install Angular Material**
+
+Run the following command to add Angular Material
+
+- ng add @angular/material
+
+**I Recommended you to Follow the prompts:**
+
+- Choose a prebuilt theme name: Indigo/Pink
+- Set up global Angular Material typography styles: y
+- Set up browser animations for Angular Material: y
+
+**Import Angular Material Modules**
+
+- Import the Angular Material modules in app.module.ts.
+
+**Install Angular Flex Layout**
+
+- Install Angular Flex Layout using command npm i @angular/flex-layout
+
+- Import the Flex Layout module in app.module.ts.
+
+
+## Firebase Configuration
+
+**Install Firebase**
+
+- Install Firebase and AngularFire using command npm install firebase @angular/fire --legacy-peer-deps
+
+- Verify the installation in package.json.
+
+**Set Up Firebase Project**
+
+- 1.Go to the Firebase Console.
+- 2.Click on "Add project" and follow the instructions to create a new Firebase project.
+- 3.After the project is created, go to the "Project Overview" and click on the web icon (</>).
+- 4.Register your app by providing a nickname and optionally setting up Firebase Hosting. Click "Register app".
+- 5.You will be provided with Firebase configuration details. Copy this configuration.
+
+**Configure Firebase in Angular**
+
+- 1.Under the src folder, create a folder named environments.
+- 2.In the environments folder, create a file named environment.ts and add the Firebase configuration.
+
+**Initialize Firebase in app.module.ts**
+
+- Import the Firebase and AngularFire modules in app.module.ts:
+
+**Deploy to Firebase**
+
+- Build the application using cmd ng build
+
+**Deploy to Firebase:**
+
+- Deploy to Firebase using cmd firebase deploy
+
+## Contact Information:
+For any questions or further information, feel free to contact:
+
+- **Name:** Dheepan S
+- **Email:** csdheepan18@gmail.com
+- **Website:** [dheepanportfolio.in](https://dheepanportfolio.in)
