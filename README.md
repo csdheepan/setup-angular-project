@@ -8,16 +8,17 @@ Ensure you have Node.js and npm installed using below command:
 **Install Angular CLI**:
 Install Angular 16 globally using the command
 
-- Command: npm install -g @angular/cli@16.0.1
+- Command: `npm install -g @angular/cli@16.0.1`
 
 
 **Verify Angular CLI Installation**
-Check the installed version of Angular CLI using cmd-  ng v
+- Check the installed version of Angular CLI using command- `ng v`
 
  **Create a New Angular Application**
-Create a new Angular application named test-application:
 
-- Command: ng new your_application_name
+- Command: `ng new your_application_name`
+
+- here I named test-application : `ng new test-application`
 
 During setup, provide the following inputs:
    
@@ -26,13 +27,13 @@ During setup, provide the following inputs:
 
  **Navigate to Application Directory**
 
- navigate to project dir using cmd - cd test-application
+- Navigate to project directory using command `cd directory_name`
 
 **Navigate to Application Directory**
 
-- Start the development server using command - ng s
+- Start the development server using command `ng s`
 
-- You will be prompted to share pseudonymous usage data. Choose y.
+- You will be prompted to share usage data. Choose y.
 
 - The application will be running on http://localhost:4200/.
   
@@ -45,11 +46,13 @@ Generate a new module under src folder
 
 - ng g m angular-material
 
+ ![Angular Material File](src/app/angular-material/angular-material.module.ts)
+
  **Install Angular Material**
 
 Run the following command to add Angular Material
 
-- ng add @angular/material
+- `ng add @angular/material`
 
 **I Recommended you to Follow the prompts:**
 
@@ -61,11 +64,15 @@ Run the following command to add Angular Material
 
 - Import the Angular Material modules in app.module.ts.
 
+ ![App Module.ts](src/app/app.module.ts)
+
 **Install Angular Flex Layout**
 
-- Install Angular Flex Layout using command npm i @angular/flex-layout
+- Install Angular Flex Layout using command `npm i @angular/flex-layout`
 
 - Import the Flex Layout module in app.module.ts.
+
+![App Module.ts](src/app/app.module.ts)
 
 
 ## Firebase Configuration
