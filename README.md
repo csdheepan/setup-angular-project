@@ -5,6 +5,10 @@ Ensure you have Node.js and npm installed using below command:
 - `node -v`
 - `npm -v`
 
+**Refrence Link for me**:
+
+  - 1. Link [test-application](https://test-application-76885.web.app)
+
 ## Installation Guide for Node.js (if not installed):
 
 If Node.js is not installed on your machine, follow these steps to install it:
@@ -168,7 +172,7 @@ Firebase provides a powerful platform for hosting web applications. Follow the s
 
 **Step 1: Install Firebase CLI**
 
-- First, you need to install Firebase CLI (Command Line Interface) tools. This allows you to interact with Firebase services from the command line. If you already installed ignore it.
+- First, you need to install Firebase CLI (Command Line Interface) tools. This allows you to interact with Firebase services from the command line.
 
 - Open your terminal and run the command  `npm install -g firebase-tools`
 
