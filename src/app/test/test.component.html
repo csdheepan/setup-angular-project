@@ -1,0 +1,188 @@
+<body>
+
+    <!-- Pagination -->
+    <section>
+     <h2>1.Pagination</h2>
+ <div fxLayout="column">
+     <div>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>phone Number</th>
+        </tr>
+        <tbody *ngFor="let data of getCurrentDataPagination()">
+          <tr>
+            <td>{{data.name}}</td>
+            <td>{{data.gender}}</td>
+            <td>{{data.phone}}</td>
+          </tr>
+        </tbody>
+      </table>
+     </div>
+     <div class="pagination-list" fxLayout="row" fxLayoutAlign="center center" style="margin: 10px 0px;">
+      <a (click)="previous()" class="link">&laquo;</a>
+      <div *ngFor="let _ of getPaginationCount(); let i = index">
+        <a (click)="previewPage(i)" class="link">{{i+1}}</a>
+      </div>
+      <a (click)="next()" class="link">&raquo;</a>
+    </div>
+ </div>
+    </section>
+
+      <!-- progress bar -->
+<section>
+      <h2>2.Progress Bar</h2>
+  <div class="container" fxLayout="column" fxLayoutAlign="center center">
+    <div class="progress-container">
+        <div id="progress-bar" class="progress-bar" [style.width.%]="progress">{{ progress }}%</div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <button  mat-flat-button color="accent" (click)="startProgress()" id="start-button">Start</button>
+    </div>
+   </div>
+</section>
+  
+
+<!-- Image Slider -->
+ <section>
+<h2>3.Image Slider</h2>
+<div fxLayout="row" fxLayoutAlign="center center">
+    <button (click)="previousPage()"><mat-icon>arrow_back_ios</mat-icon></button>
+    <mat-card *ngFor="let card of getCurrentPageCards(); let i = index">
+        <h1>{{ card.title }}</h1>
+      </mat-card>
+      <button (click)="nextPage()"><mat-icon>arrow_forward_ios</mat-icon></button>    
+</div>
+  <div class="pagination-image-slider">
+    <a (click)="previousPage()">&laquo;</a>
+    <div *ngFor="let _ of getPageNumbers(); let i = index">
+      <a (click)="goToPage(i)">{{ i + 1 }}</a>
+    </div>
+    <a (click)="nextPage()">&raquo;</a>
+  </div>
+</section>
+
+
+  <!-- Loader -->
+<section>
+  <h2>4.Loader</h2>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <div class="loader"></div>
+  </div>
+</section>
+
+<!-- Star Rating -->
+<section>
+ <h2>5.Star Rating</h2>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <div *ngFor="let star of stars;let i=index">
+          <mat-icon class="star-icon" 
+          [class.filled]="i < rating || i < hoveredRating"
+          (click)="setRating(i + 1)"
+          (mouseover)="highlightStars(i + 1)"
+          (mouseleave)="clearHighlight()">
+          {{ star }}
+         </mat-icon>
+ </div>
+    </div>
+<!-- Expression i < rating:
+    This expression checks if the current index i is less than the current rating value.
+    For example, if the current rating is 3 and the loop index i is 0, 1, or 2, the expression i < rating will be true, and the filled class will be applied.
+    For indices 3 and above, the expression will be false, and the filled class will not be applied. -->
+</section>
+
+
+<section>
+    <h2>Simple TO-DO Appliaction</h2>
+    <div class="todo-body">
+      <div class="todo-container">
+        <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center center">
+            <input type="text" class="todo-input" [(ngModel)]="taskContent">
+            <button class="add-btn" (click)="addTask()"><mat-icon>add</mat-icon></button>
+        </div>
+      <div class="todo-inner-container">
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" *ngFor="let task of taskArray;let i=index" style="margin: 20px 0px;">
+            <div fxLayout="column" style="width: 100%;">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <mat-checkbox [checked]="isTaskComplete(task)" (change)="checkboxChanges($event,task)"></mat-checkbox>
+                    <p class="todo-content" *ngIf="!isEditingComment(i)">{{task.taskContent}}</p>
+                    <input type="text" [(ngModel)]="editContent" class="editable-input-text" *ngIf="isEditingComment(i)">
+                </div>
+                <div class="chip-container" [ngStyle]="{'background':getStatusbgColor(task.status),'color':getStatusTextColor(task.status)}">
+                   <span>{{task.status}}</span>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+                  <button class="action-btn" (click)="editTask(i)"  *ngIf="!isEditingComment(i)"><mat-icon>edit</mat-icon></button>
+                  <button class="action-btn" (click)="saveTask(task)"  *ngIf="isEditingComment(i)"><mat-icon>save</mat-icon></button>
+                  <button class="action-btn" (click)="deleteTask(task)"><mat-icon>delete</mat-icon></button>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="taskArray.length === 0" fxLayout="row" fxLayoutAlign="center center" style="height: 50vh;">
+          <h1>No Task Added by you</h1>
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+
+
+<section>
+    <h2>6.TicTacToe</h2>
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+        <div class="board">
+          <div *ngFor="let cell of cells;let i=index" class="cells" (click)="handleClick(i)">
+             <h5 [class.x-cell]="cell == 'x'" [class.o-cell]="cell == 'o'">{{cell}}</h5>
+          </div>
+        </div>
+        <h1 class="winner-text">{{winner}}</h1>
+    </div>
+</section>
+
+
+<section>
+  <h2>7.Infinite Scroll</h2>
+  <div *ngFor="let item of items">
+    <h2>{{item}}</h2>
+  </div>
+
+<div fxLayout="row" fxLayoutAlign="center center" *ngIf="isLoading">
+ <h1>Loading...</h1>
+</div>
+</section>
+
+
+<section>
+  <h2>8.AutoComplete with search field</h2>
+  <div fxLayout="row" fxLayoutAlign="center center">
+  <mat-form-field>
+    <mat-label>Search</mat-label>
+    <input matInput  [matAutocomplete]="auto" #search (keyup)="onInputSearch(search.value,$event)">
+  </mat-form-field>
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let option of options" [value]="option">
+      {{option.name}}
+    </mat-option>
+  </mat-autocomplete>
+  </div>
+</section>
+
+
+<section>
+  <h2>9.Open modal pop uisng Html,Css.Js</h2>
+<div fxLayout="row" fxLayoutAlign="center center">
+    <button id="openModalBtn" class="modal-button">Open Modal</button>
+  </div>
+
+  <div id="myModal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Modal Header</h2>
+          <p>This is a simple modal pop-up.</p>
+      </div>
+  </div>
+</section>
+
+
+</body>

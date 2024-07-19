@@ -11,10 +11,12 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from 'src/environment/environment';
 import { FormsModule } from '@angular/forms';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
